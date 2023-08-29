@@ -14,8 +14,8 @@ const iconsArray = [
         id: "./images/icons.svg#facebook",
     },
     {        
-        link: "https://www.linkedid.com/",
-        id: "./images/icons.svg#linkedid",
+        link: "https://www.linkedin.com/",
+        id: "./images/icons.svg#linkedin",
     },
 ];
 
