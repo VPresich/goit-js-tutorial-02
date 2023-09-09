@@ -10,22 +10,32 @@ buttonCloseCalculator.addEventListener('click', () =>{
     modalBackdropCalculator.classList.add('is-hidden');
 });
 
-const inputNumber1 = document.getSelector('id-input-number-one');
+const inputNumber1 = document.getElementById('id-input-number-one');
 const inputNumber2 = document.getElementById('id-input-number-two');
-const inputResult = document.getElementById('id-input-result');
-let result = 0;
-const btnAdd = document.getElementById('btnAdd');
- 
-  btnAdd.addEventListener('click', () => {
-    result = Number(inputNumber1.value) + Number(inputNumber2.value); 
-    inputResult.value = result;
-  });
+const outputResult = document.getElementById('id-output-result');
 
-  const btnMinus = document.getElementById('btnMinus');
- 
+let result = 0; const btnAdd = document.getElementById('btnAdd');
+btnAdd.addEventListener('click', () => {
+  result = Number(inputNumber1.value) + Number(inputNumber2.value); 
+  outputResult.value = String(result);
+});
+
+  const btnMinus = document.getElementById('btnMinus'); 
   btnMinus.addEventListener('click', () => {     
       result = Number(inputNumber1.value) - Number(inputNumber2.value);
-      inputResult.value = result;
+      outputResult.value = String(result);
+  });
+
+  const btnMult = document.getElementById('btnMult'); 
+  btnMult.addEventListener('click', () => {     
+      result = Number(inputNumber1.value) * Number(inputNumber2.value);
+      outputResult.value = String(result);
+  });
+
+  const btnDivide = document.getElementById('btnDivide'); 
+  btnDivide.addEventListener('click', () => {     
+      result = Number(inputNumber1.value) / Number(inputNumber2.value);
+      outputResult.value = String(result);
   });
 
 

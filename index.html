@@ -102,7 +102,9 @@
           <form class="form-order-service">
             <!-- Input fields -->
             <div class="input-container">
-              <label class="input-label" for="user-name">Name</label>
+              <label class="input-label" for="user-name"
+                >Name<sup>*</sup></label
+              >
               <div class="input-custom">
                 <input
                   class="input-real"
@@ -125,7 +127,9 @@
             </div>
 
             <div class="input-container">
-              <label class="input-label" for="user-phone">Phone</label>
+              <label class="input-label" for="user-phone"
+                >Phone<sup>*</sup></label
+              >
               <div class="input-custom">
                 <input
                   class="input-real"
@@ -148,13 +152,17 @@
             </div>
 
             <div class="input-container">
-              <label class="input-label" for="user-email">Email</label>
+              <label class="input-label" for="user-email"
+                >Email<sup>*</sup></label
+              >
               <div class="input-custom">
                 <input
                   class="input-real"
                   id="user-email"
                   name="user_email"
                   type="email"
+                  title="Поле обов'язкове"
+                  required
                 />
                 <svg
                   class="input-icon"
@@ -173,8 +181,7 @@
               <textarea
                 class="input-textarea"
                 id="user-comment"
-                name="user-comment"
-                rows="5"
+                name="user_comment"
                 placeholder="Text input"
               ></textarea>
             </div>
@@ -185,8 +192,9 @@
                 class="checkbox-real visually-hidden"
                 type="checkbox"
                 id="user-privacy"
-                name="user-privacy"
+                name="user_privacy"
                 value="true"
+                required
               />
               <label class="checkbox-label" for="user-privacy">
                 <span class="checkbox-custom">
@@ -195,7 +203,7 @@
                   </svg>
                 </span>
                 I accept the terms and conditions of the
-                <a class="input-link" href="">Privacy Policy</a>
+                <a class="input-link" href="">Privacy Policy</a><sup>*</sup>
               </label>
             </div>
             <!-- Button -->
@@ -232,59 +240,144 @@
                 <use href="./images/icons.svg#close-form"></use>
               </svg>
             </button>
-            <!-- Text invitation -->
-            <h2 class="form-title">Calculator</h2>
+
+            <!-- Title form -->
+            <h2 class="form-title-calculator">Calculator</h2>
+
             <!-- Form calculator -->
             <form class="form-calculator">
-              <div class="control-wrapper">
-                <label class="input-label-calculator" for="id-input-number-one">
-                  Number one:
-                </label>
-                <input
-                  class="input-number-calculator"
-                  type="text"
-                  name="input-number-one"
-                  id="id-input-number-one"
-                />
-              </div>
+              <div class="form-controls-wrapper">
+                <div class="input-controls">
+                  <div class="control-wrapper">
+                    <label
+                      class="input-label-calculator"
+                      for="id-input-number-one"
+                    >
+                      Number one:
+                    </label>
+                    <div class="input-number-calculator-customer">
+                      <input
+                        class="input-number-calculator"
+                        type="text"
+                        name="input-number-one"
+                        id="id-input-number-one"
+                        pattern="[0-9]{+}[eE.-+]{1}"
+                        title="Input number"
+                      />
+                      <svg
+                        class="input-icon-calculator"
+                        width="16"
+                        height="16"
+                        aria-label="quill icon"
+                      >
+                        <use href="./images/icons.svg#icon-quill"></use>
+                      </svg>
+                    </div>
+                  </div>
 
-              <div class="control-wrapper">
-                <label class="input-label-calculator" for="id-input-number-two">
-                  Number two:
-                </label>
-                <input
-                  class="input-number-calculator"
-                  type="text"
-                  name="input-number-two"
-                  id="id-input-number-two"
-                />
-              </div>
+                  <div class="control-wrapper">
+                    <label
+                      class="input-label-calculator"
+                      for="id-input-number-two"
+                    >
+                      Number two:
+                    </label>
+                    <div class="input-number-calculator-customer">
+                      <input
+                        class="input-number-calculator"
+                        type="text"
+                        name="input-number-two"
+                        id="id-input-number-two"
+                        pattern="[0-9]{+}[eE.-+]{1}"
+                        title="Input number"
+                      />
+                      <svg
+                        class="input-icon-calculator"
+                        width="16"
+                        height="16"
+                        aria-label="quill icon"
+                      >
+                        <use href="./images/icons.svg#icon-quill"></use>
+                      </svg>
+                    </div>
+                  </div>
 
-              <div class="control-wrapper">
-                <label class="input-label-calculator" for="id-input-result">
-                  Result:
-                </label>
-                <input
-                  class="input-number-calculator"
-                  type="text"
-                  name="input-result"
-                  id="id-input-result"
-                />
-              </div>
-
-              <div class="list-calc-buttons">
-                <button class="calc-button" type="button" id="btnAdd">
-                  Add
-                </button>
-                <button class="calc-button" type="button" id="btnMinus">
-                  Minus
-                </button>
-                <button class="calc-button" type="button" id="btnMult">
-                  Mult
-                </button>
-                <button class="calc-button" type="button" id="btnDivision">
-                  Division
-                </button>
+                  <div class="control-wrapper">
+                    <label
+                      class="input-label-calculator"
+                      for="id-output-result"
+                    >
+                      Result:
+                    </label>
+                    <div class="input-number-calculator-customer">
+                      <input
+                        class="input-number-calculator"
+                        type="text"
+                        name="output-result"
+                        id="id-output-result"
+                        readonly
+                      />
+                      <svg
+                        class="input-icon-calculator"
+                        width="16"
+                        height="16"
+                        aria-label="quill icon"
+                      >
+                        <use href="./images/icons.svg#icon-book"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-calc-buttons">
+                  <button class="calc-button" type="button" id="btnAdd">
+                    <svg class="icon-calc-button-container">
+                      <use
+                        class="icon-calc-button"
+                        href="./images/icons.svg#icon-plus"
+                        width="15"
+                        height="15"
+                        aria-label="icon plus"
+                      ></use>
+                    </svg>
+                    Add
+                  </button>
+                  <button class="calc-button" type="button" id="btnMinus">
+                    <svg class="icon-calc-button-container">
+                      <use
+                        class="icon-calc-button"
+                        href="./images/icons.svg#icon-minus"
+                        width="15"
+                        height="15"
+                        aria-label="icon minus"
+                      ></use>
+                    </svg>
+                    Subtract
+                  </button>
+                  <button class="calc-button" type="button" id="btnMult">
+                    <svg class="icon-calc-button-container">
+                      <use
+                        class="icon-calc-button"
+                        href="./images/icons.svg#icon-mult"
+                        width="15"
+                        height="15"
+                        aria-label="icon mult"
+                      ></use>
+                    </svg>
+                    Multiply
+                  </button>
+                  <button class="calc-button" type="button" id="btnDivide">
+                    <svg class="icon-calc-button-container">
+                      <use
+                        class="icon-calc-button"
+                        href="./images/icons.svg#icon-division"
+                        width="15"
+                        height="15"
+                        aria-label="icon-division"
+                      ></use>
+                    </svg>
+                    Divide
+                  </button>
+                </div>
               </div>
             </form>
           </div>
